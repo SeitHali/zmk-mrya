@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEF 0
@@ -27,21 +26,21 @@
 
         default_layer {
             bindings = <
-       &kp ESC         &kp N1  &kp N2        &kp N3        &kp N4           &kp N5        &kp N6       &kp N7          &kp N8     &kp N9                  &kp N0    &kp MINUS
-&none  &kp TAB         &kp Q   &kp W         &kp E         &kp R            &kp T         &kp Y        &kp U           &kp I      &kp O                   &kp P     &kp GRAVE      &none
-       &kp LEFT_SHIFT  &kp A   &kp S         &kp D         &kp F            &kp G         &kp H        &kp J           &kp K      &kp L                   &kp SEMI  &mt RCTRL SQT
-       &kp LCTRL       &kp Z   &kp X         &kp C         &kp V            &kp B         &kp N        &kp M           &kp COMMA  &kp DOT                 &kp FSLH  &kp EQUAL
-                               &kp LEFT_ALT  &kp LEFT_GUI  &mt LSHFT SPACE  &lt 1 LALT    &lt 2 ENTER  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI RIGHT_BRACKET
+        &kp ESC         &kp N1  &kp N2        &kp N3        &kp N4           &kp N5        &kp N6       &kp N7          &kp N8     &kp N9                  &kp N0    &kp MINUS
+&tog 3  &kp TAB         &kp Q   &kp W         &kp E         &kp R            &kp T         &kp Y        &kp U           &kp I      &kp O                   &kp P     &kp LEFT_BRACKET  &none
+        &kp LEFT_SHIFT  &kp A   &kp S         &kp D         &kp F            &kp G         &kp H        &kp J           &kp K      &kp L                   &kp SEMI  &mt RCTRL SQT
+        &kp LCTRL       &kp Z   &kp X         &kp C         &kp V            &kp B         &kp N        &kp M           &kp COMMA  &kp DOT                 &kp FSLH  &kp EQUAL
+                                &kp LEFT_ALT  &kp LEFT_GUI  &mt LSHFT SPACE  &lt 1 LALT    &lt 2 ENTER  &mt RSHFT BSPC  &lt 2 DEL  &mt RGUI RIGHT_BRACKET
             >;
         };
 
         lower_layer {
             bindings = <
-        &trans          &trans  &trans  &trans     &trans  &trans     &trans            &trans             &trans        &trans           &trans         &trans
-&trans  &kp UNDER       &kp F1  &kp F2  &kp F3     &kp F4  &kp F5     &kp AMPERSAND     &kp PIPE           &kp F8        &kp F9           &kp F10        &kp F11          &mt RGUI F12
-        &mt LCTRL PLUS  &kp F6  &kp F7  &kp F8     &kp F9  &kp F10    &kp LEFT          &kp DOWN           &kp UP_ARROW  &kp RIGHT_ARROW  &kp K_APP      &mt RCTRL MINUS
-        &mt LALT EQUAL  &kp N1  &kp N2  &kp N3     &kp N4  &kp N5     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp N8        &kp N9           &kp BACKSLASH  &trans
-                                &trans  &lt 3 TAB  &trans  &trans     &trans            &trans             &lt 3 DEL     &trans
+        &trans            &trans  &trans  &trans     &trans  &trans     &trans          &trans           &trans            &trans             &trans         &trans
+&trans  &kp LS(LEFT_ALT)  &kp F1  &kp F2  &kp F3     &kp F4  &kp F5     &kp AMPERSAND   &kp PIPE         &kp F8            &kp F9             &kp F10        &kp TILDE        &mt RGUI F12
+        &mt LCTRL PLUS    &kp F6  &kp F7  &kp F8     &kp F9  &kp F10    &kp LEFT        &kp DOWN         &kp UP_ARROW      &kp RIGHT_ARROW    &kp K_APP      &mt RCTRL MINUS
+        &mt LALT EQUAL    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
+                                  &trans  &lt 3 TAB  &trans  &trans     &trans          &kp DELETE       &lt 3 DEL         &trans
             >;
         };
 
@@ -57,11 +56,11 @@
 
         adjust_layer {
             bindings = <
-       &none        &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &none
-&none  &bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader  &none
-       &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-       &sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
-                                  &none         &trans        &none         &trans          &trans        &none         &trans        &none
+       &to 0        &none   &none   &none   &none   &none           &none   &none   &none   &none   &none   &none
+&none  &bootloader  &none   &none   &none   &none   &none           &none   &none   &none   &none   &none   &bootloader  &none
+       &trans       &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+       &sys_reset   &none   &none   &none   &none   &none           &none   &none   &none   &none   &none   &sys_reset
+                            &none   &trans  &none   &kp LEFT_ALT    &trans  &none   &trans  &none
             >;
         };
 
