@@ -36,11 +36,11 @@
 
         lower_layer {
             bindings = <
-        &trans            &trans  &trans  &trans     &trans  &trans     &trans          &trans           &trans            &trans             &trans         &trans
-&trans  &kp LS(LEFT_ALT)  &kp F1  &kp F2  &kp F3     &kp F4  &kp F5     &kp AMPERSAND   &kp PIPE         &kp F8            &kp F9             &kp F10        &kp TILDE        &mt RGUI F12
-        &mt LCTRL PLUS    &kp F6  &kp F7  &kp F8     &kp F9  &kp F10    &kp LEFT        &kp DOWN         &kp UP_ARROW      &kp RIGHT_ARROW    &kp K_APP      &mt RCTRL MINUS
-        &mt LALT EQUAL    &kp N1  &kp N2  &kp N3     &kp N4  &kp N5     &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-                                  &trans  &lt 3 TAB  &trans  &trans     &trans          &kp DELETE       &lt 3 DEL         &trans
+        &trans          &trans  &trans  &trans     &trans  &trans     &trans            &trans           &trans            &trans             &trans         &trans
+&trans  &trans          &kp F1  &kp F2  &kp F3     &kp F4  &kp F5     &kp AMPERSAND     &kp PIPE         &kp F8            &kp F9             &kp F10        &kp TILDE        &mt RGUI F12
+        &mt LCTRL PLUS  &kp F6  &kp F7  &kp F8     &kp F9  &kp F10    &kp LEFT          &kp DOWN         &kp UP_ARROW      &kp RIGHT_ARROW    &kp K_APP      &mt RCTRL MINUS
+        &mt LALT EQUAL  &kp N1  &kp N2  &kp N3     &kp N4  &kp N5     &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
+                                &trans  &lt 3 TAB  &trans  &trans     &kp LS(LEFT_ALT)  &kp DELETE       &lt 3 DEL         &trans
             >;
         };
 
